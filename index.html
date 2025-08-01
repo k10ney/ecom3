@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viintagee Boutique - Mode Urbaine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">logo</div>
+      
+      <button class="menu-toggle" id="toggleBtn">&#9776;</button>
+
+      <ul class="nav_bar" id="navMenu">
+        <li class="nav_link"><a href="#A" class="link">Accueil <hr></a></li>
+        <li class="nav_link"><a href="#B" class="link">Nouveauté <hr></a></li>
+        <li class="nav_link"><a href="#c">Nos marques <hr></a></li>
+        <li class="nav_link"><a href="#">Témoignage <hr></a></li>
+        <li class="nav_link"><a href="#">Promotion <hr></a></li>
+        <li class="nav_link"><a href="#">Galerie <hr></a></li>
+        <li class="log">
+          <input type="text" placeholder="search" id="bar_recherche" />
+          <button type="button">search</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="conteneurA">
+    <div class="descriptA">
+      <h1>Bienvenue <br> Viintagee Boutique</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea, quisquam iste tempore...
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi nemo voluptatum excepturi voluptas repellat harum sapiente accusamus quisquam, illo non eum odio, architecto cum, facere enim assumenda praesentium magnam sed.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nobis, ab tempore dicta nam pariatur. Non doloremque, ab eius dolorum suscipit dolore atque delectus incidunt vitae nesciunt asperiores, numquam dolorem?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa iste magnam laborum iure assumenda aliquam nisi enim porro asperiores! Voluptas necessitatibus odit quia ipsa odio est, dolore aut accusantium.
+      </p>
+      <a href=""> <button type="button" class="btn1">Galerie</button> </a>
+      
+    </div>
+    <div class="image">
+      <img src="img/2.png" alt="chaussure" id="img"/>
+      <div class="precedent" onclick="ChangeDimage(-1)">&lt;</div>
+      <div class="suivant" onclick="ChangeDimage(1)">&gt;</div>
+    </div>
+  </section>
+<section id="B">
+  <h1>Nouveauté</h1>
+  <div class="conteneur2">
+
+    <div class="img img1">
+      <img src="/img/7.jpg" alt="image7">
+      <h3>ActiveFit Orange, Violet</h3>
+      <p>Tenue de sport stylée et confortable.</p>
+      <button type="button" class="prix-btn" data-nom="ActiveFit Orange, Violet" data-prix="14000">14 000 FCFA</button>
+
+      <form class="form-commande">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="tel" placeholder="Votre numéro" required>
+        <input type="text" placeholder="Lieu de livraison" required>
+        <button type="submit" class="envoyer-btn">Envoyer sur WhatsApp</button>
+        <button type="button" class="annuler-btn">Annuler</button>
+      </form>
+    </div>
+
+    <div class="img">
+      <img src="/img/6.jpg" alt="image6">
+      <h3>Coupe Large Style Nike</h3>
+      <p>Tenue Nike noire élégante avec t-shirt, pantalon ample et sneakers noire blanches</p>
+      <button type="button" class="prix-btn" data-nom="Coupe Large Style Nike" data-prix="44000">44 000 FCFA</button>
+
+      <form class="form-commande">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="tel" placeholder="Votre numéro" required>
+        <input type="text" placeholder="Lieu de livraison" required>
+        <button type="submit" class="envoyer-btn">Envoyer sur WhatsApp</button>
+        <button type="button" class="annuler-btn">Annuler</button>
+      </form>
+    </div>
+
+    <div class="img">
+      <img src="/img/5.jpg" alt="image5">
+      <h3>Style Tennis Noir</h3>
+      <p>Tenue Nike noire, style tennis chic et sportif.</p>
+      <button type="button" class="prix-btn" data-nom="Style Tennis Noir" data-prix="41000">41 000 FCFA</button>
+
+      <form class="form-commande">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="tel" placeholder="Votre numéro" required>
+        <input type="text" placeholder="Lieu de livraison" required>
+        <button type="submit" class="envoyer-btn">Envoyer sur WhatsApp</button>
+        <button type="button" class="annuler-btn">Annuler</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+<section  id="c">
+<h1>Nos marques</h1>
+<p>Qualité garentie avec les plus grandes marque </p>
+<div class="conteneur3">
+  <div class="logo logo1"> 
+    <img src="/img/logo/logo_nike.png" alt="logo_nike">
+   
+  </div>
+  <div class="logo logo2">
+    <img src="/img/logo/logo_adidas.png" alt="logo_adidas">
+  
+  </div>
+  <div class="logo logo3">
+    <img src="/img/logo/logo_gucci.png" alt="logo_gucci">
+    
+  </div>
+  <div class="logo logo4">
+    <img src="/img/logo/logo_louis.png" alt="logo_louis">
+    
+  </div>
+  <div class="logo logo5" >
+    <img src="/img/logo/logo_puma.png" alt="logo_puma">
+  
+  </div>
+
+</div>
+
+</section>
+
+
+
+  <script>
+    const image = ["2.png", "3.jpg", "4.jpg"];
+    let index = 0;
+
+    function ChangeDimage(sens) {
+      index = index + sens;
+      if (index > image.length - 1) index = 0;
+      if (index < 0) index = image.length - 1;
+      document.getElementById('img').src = "img/" + image[index];
+    }
+
+    setInterval(() => ChangeDimage(1), 100000);
+
+    // Menu toggle
+    const toggleBtn = document.getElementById('toggleBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    // SCRIPTE_LOGO
+   const logo1 = document.querySelector('.logo1');
+let isText = false;
+
+logo1.addEventListener('click', () => {
+  if (!isText) {
+    logo1.textContent = 'NIKE';
+    logo1.style.color = 'black';
+    logo1.style.textDecoration='underline'
+    isText = true;
+  } else {
+    logo1.innerHTML = '<img src="/img/logo/logo_nike.png" alt="Nike" width="100"> ';
+    isText = false;
+  }
+});
+
+  const logo2 = document.querySelector('.logo2');
+let isText2 = false;
+
+logo2.addEventListener('click', () => {
+  if (!isText2) {
+    logo2.textContent = 'ADIDAS';
+    logo2.style.color = 'black';
+    logo2.style.textDecoration='underline'
+    isText2 = true;
+  } else {
+    logo2.innerHTML = '<img src="/img/logo/logo_adidas.png" alt="ADIDAS" width="100"> ';
+    isText2 = false;
+  }
+});
+
+  const logo3 = document.querySelector('.logo3');
+let isText3 = false;
+
+logo3.addEventListener('click', () => {
+  if (!isText3) {
+    logo3.textContent = 'GUCCI';
+    logo3.style.color = 'black';
+    logo3.style.textDecoration='underline'
+    isText3 = true;
+  } else {
+    logo3.innerHTML = '<img src="/img/logo/logo_gucci.png" alt="GUCCI" width="100"> ';
+    isText3 = false;
+  }
+});
+
+  const logo4 = document.querySelector('.logo4');
+let isText4 = false;
+
+logo4.addEventListener('click', () => {
+  if (!isText4) {
+    logo4.textContent = 'LOUIS VUITTON';
+    logo4.style.color = 'black';
+    logo4.style.textDecoration='underline'
+    isText4 = true;
+  } else {
+    logo4.innerHTML = '<img src="/img/logo/logo_louis.png" alt="LOUIS VUITTON" width="100"> ';
+    isText4 = false;
+  }
+});
+
+  const logo5 = document.querySelector('.logo5');
+let isText5 = false;
+
+logo5.addEventListener('click', () => {
+  if (!isText5) {
+    logo5.textContent = 'PUMA';
+    logo5.style.color = 'black';
+    logo5.style.textDecoration='underline'
+    isText5 = true;
+  } else {
+    logo5.innerHTML = '<img src="/img/logo/logo_puma.png" alt="PUMA" width="100"> ';
+    isText5 = false;
+  }
+});
+
+  // Ouvre le formulaire quand on clique sur le bouton prix
+  document.querySelectorAll('.prix-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const form = button.nextElementSibling;
+      form.classList.add('active');
+    });
+  });
+
+  // Ferme le formulaire quand on clique sur Annuler
+  document.querySelectorAll('.annuler-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const form = button.closest('.form-commande');
+      form.classList.remove('active');
+      form.reset();
+    });
+  });
+
+  // Envoi vers WhatsApp
+  document.querySelectorAll('.form-commande').forEach(form => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nom = this.querySelector('input[placeholder="Votre nom"]').value;
+      const numero = this.querySelector('input[placeholder="Votre numéro"]').value;
+      const lieu = this.querySelector('input[placeholder="Lieu de livraison"]').value;
+
+      const parent = this.closest('.img');
+      const nomProduit = parent.querySelector('button.prix-btn').dataset.nom;
+      const prix = parent.querySelector('button.prix-btn').dataset.prix;
+      const imagePath = parent.querySelector('img').getAttribute('src');
+      const imageURL = window.location.origin + imagePath;
+
+      const message = `Bonjour Monsieur/Madame,
+Je me nomme ${nom}.
+J'ai commandé : ${nomProduit} au prix de ${prix} FCFA.
+Je souhaite être livré à : ${lieu}.
+Voici l'image du produit : ${imageURL}
+
+Merci !`;
+
+      const telProprio = '2250718209936';
+      const url = `https://wa.me/${telProprio}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
+  });
+</script>
